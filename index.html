@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Abi King Emyu</title>
+
+  <!-- Hubungkan ke file CSS -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Hubungkan ke file JavaScript -->
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <h1>Abi King Emyu</h1>
+
+  <button onclick="showPopup('loginPopup')">Masuk</button>
+
+  <!-- Popup Login -->
+  <div id="loginPopup" class="popup">
+    <div class="popup-header">
+      <strong>Masuk Akun</strong>
+      <span class="close-btn" onclick="closePopup('loginPopup')">X</span>
+    </div>
+    <input type="text" id="loginUser" placeholder="Gmail / Nomor Telepon">
+    <input type="password" id="loginPass" placeholder="Kata Sandi">
+    <br><br>
+    <button onclick="nextStep()">Berikutnya</button>
+    <p><a href="#" onclick="alert('Fitur lupa kata sandi belum aktif')">Lupa kata sandi?</a></p>
+    <button onclick="showPopup('buatAkunPopup'); closePopup('loginPopup')">Buat Akun Baru</button>
+  </div>
+
+<!-- Popup Gambar Setelah Login -->
+<div id="gambarPopup" class="popup">
+  <div class="popup-header">
+    <strong>Selamat Datang</strong>
+    <span class="close-btn" onclick="closePopup('gambarPopup')">X</span>
+  </div>
+  <img src="fan.jpg" alt="gambar fans" width="300">
+  <p>Halo, kamu sudah login! ⚽</p>
+</div>
+
+  <!-- Popup Buat Akun -->
+  <div id="buatAkunPopup" class="popup">
+    <div class="popup-header">
+      <strong style="font-size:16px;">BUAT AKUN</strong>
+      <span class="close-btn" onclick="closePopup('buatAkunPopup')">X</span>
+    </div>
+    <input type="text" id="newUser" placeholder="Gmail / Nomor Telepon">
+    <input type="password" id="newPass" placeholder="Kata Sandi Anda">
+    <br><br>
+    <button onclick="buatAkun()">Lanjutkan</button>
+  </div>
+</body>
+</html>
